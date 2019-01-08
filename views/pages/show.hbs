@@ -1,10 +1,11 @@
-<h1>{{comment.title}}</h1>
-<h3>{{comment.author}}</h3>
-<p>{{comment.createdAt}}</p>
-<p>{{comment.content}}</p>
+<h2>{{page.name}}</h2>
+<p>{{page.source}}</p>
+<p>{{page.date}}</p>
+<p>{{page.description}}</p>
+<p>{{page.genre}}</p>
 
-<a href="/{{newsLinkId}}/comments/{{comment._id}}/edit"><button class="btn">Edit Comment</button></a>
+<a href="/{{booksId}}/pages/{{page._id}}/edit"><button class="btn">Edit Page</button></a>
 
-<form action="/{{newsLinkId}}/comments/{{comment._id}}?_method=DELETE" method="POST">
-    <button class="btn" type="submit">Delete Me</button>
+<form action="/{{booksId}}/pages/{{page._id}}?_method=DELETE" method="POST">
+    <button class="btn" type="submit">Delete</button>
 </form>
