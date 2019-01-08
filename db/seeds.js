@@ -9,7 +9,7 @@ Author.deleteMany()
     .then(() => {
             return Author.create({
                 userName: "batman",
-                password: "alfredKnows"
+                password: "alfredKnows",
                 firstName: "Bruce",
                 lastName: 'Wayne',
                 email: 'b.wayne@gmail.com',

@@ -7,7 +7,7 @@ const Author = new Schema({
     firstName: String,
     lastName: String,
     email: String,
-    phone: String,
+    phoneNumber: String,
     location: String
 })
 
