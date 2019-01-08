@@ -1,0 +1,15 @@
+<div style="text-align: center; margin: 20px;">
+    <a href="/{{newslinkId}}"><button class="btn">Go back</button></a>
+    <a href="/{{newslinkId}}/comments/new"><button class="btn">New Comment</button></a>
+    {{#each comments}}
+    <div style="border: 1px solid black; margin: 20px auto; width: 60vw;">
+        <div style="text-align: center; padding: 10px;">
+            <h3>{{title}}</h3>
+            <h5>{{author}}</h5>
+            <p>{{createdAt}}</p>
+            <p>{{content}}</p>
+            <a href="/{{../newslinkId}}/comments/{{_id}}"><button class="btn">Click me</button></a>
+        </div>
+    </div>
+    {{/each}}
+</div>

@@ -1,0 +1,16 @@
+<div style="text-align: center; margin: 20px;">
+    <a href="/{{newslink._id}}/edit"><button class="btn">Edit</button></a>
+    <a href="/{{newslink._id}}/comments"><button class="btn">Go to the comments</button></a>
+    <a href="/"><button class="btn">Home</button></a>
+    <h1>{{newslink.name}}</h1>
+    <p>{{newslink.content}}</p>
+    <img src={{newslink.img}} alt="{{newslink.name}}" style="width: 50vw;">
+    <a href={{newslink.link}}>
+        <h5>Go to site</h5>
+    </a>
+    <p>Created at: {{newslink.createdAt}}</p>
+
+    <form action="/{{newslink._id}}?_method=DELETE" method="POST">
+        <button class="btn" type="submit">Delete</button>
+    </form>
+</div>

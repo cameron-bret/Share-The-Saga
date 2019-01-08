@@ -1,0 +1,27 @@
+{
+  "name": "sharethesaga",
+  "version": "1.0.0",
+  "description": "a storytelling tool",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cameron-bret/sharethesaga.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cameron-bret/sharethesaga/issues"
+  },
+  "homepage": "https://github.com/cameron-bret/sharethesaga#readme",
+  "dependencies": {
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "hbs": "^4.0.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.4.2",
+    "node": "^11.6.0"
+  }
+}
