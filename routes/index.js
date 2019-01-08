@@ -12,12 +12,10 @@ router.get('/:id/update', bookController.edit)
 router.patch('/:id', bookController.update)
 router.delete('/:id', bookController.delete)
 
-router.get('/:id/comments', pagesController.index)
-router.get('/:id/comments/create', pagesController.new)
-router.post('/:id/comments', pagesController.create)
-router.get('/:id/comments/:commentId', pagesController.show)
-router.get('/:id/comments/:commentId/update', pagesController.edit)
-router.patch('/:id/comments/:commentId', pagesController.update)
-router.delete('/:id/comments/:commentId', pagesController.delete)
+router.get('/:id/pages', pagesController.index)
+router.get('/:id/pages/new', pagesController.new)
+router.post('/:id/pages/create', pagesController.create)
+router.get('/:id/pages/:commentId', pagesController.show)
+router.delete('/:id/pages/:commentId', pagesController.delete)
 
 module.exports = router
