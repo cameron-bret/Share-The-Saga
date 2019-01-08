@@ -1,16 +1,16 @@
-<div style="text-align: center; margin: 20px;">
-    <a href="/{{newslink._id}}/edit"><button class="btn">Edit</button></a>
-    <a href="/{{newslink._id}}/comments"><button class="btn">Go to the comments</button></a>
-    <a href="/"><button class="btn">Home</button></a>
-    <h1>{{newslink.name}}</h1>
-    <p>{{newslink.content}}</p>
-    <img src={{newslink.img}} alt="{{newslink.name}}" style="width: 50vw;">
-    <a href={{newslink.link}}>
+<div style="text-align: center; margin: 25px;">
+    <a href="/{{book._id}}/edit"><button class="btn">Edit</button></a>
+    <a href="/{{book._id}}/comments"><button class="btn">View Pages</button></a>
+    <a href="/"><button class="btn">Share The Saga</button></a>
+    <h1>{{book.name}}</h1>
+    <p>{{book.content}}</p>
+    <img src={{book.img}} alt="{{book.name}}" style="width: 50vw;">
+    <a href={{book.link}}>
         <h5>Go to site</h5>
     </a>
-    <p>Created at: {{newslink.createdAt}}</p>
+    <p>Publish Date: {{book.date}}</p>
 
-    <form action="/{{newslink._id}}?_method=DELETE" method="POST">
+    <form action="/{{book._id}}?_method=DELETE" method="POST">
         <button class="btn" type="submit">Delete</button>
     </form>
 </div>

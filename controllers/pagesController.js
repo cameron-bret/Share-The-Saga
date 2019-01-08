@@ -1,43 +1,44 @@
+const Author = require('../models/Author')
 const Books = require('../models/Books')
 const Pages = require('../models/Pages')
 
 const pagesController = {
     index: (req, res) => {
-        const newslinkId = req.params.id
-        console.log(newslinkId)
-        Books.findById(newslinkId).populate('comments').then((newslink) => {
-            const comments = newslink.comments
-            res.render('comments/index', {
-                comments,
-                newslinkId
+        const bookId = req.params.id
+        console.log(bookId)
+        Books.findById(bookId).populate('pages').then((bookId) => {
+            const pages = bookId.pages
+            res.render('pages/index', {
+                pages,
+                bookId
             })
         })
     },
     new: (req, res) => {
-        const newslinkId = req.params.id
-        res.render('comments/new', {
-            newslinkId: newslinkId
+        const bookId = req.params.id
+        res.render('pages/new', {
+            bookId: bookId
         })
     },
     create: (req, res) => {
-        const newslinkId = req.params.id
-        Books.findById(newslinkId)
-            .then((newslink) => {
+        const bookId = req.params.id
+        Books.findById(bookId)
+            .then((bookId) => {
                 Pages.create(req.body)
-                    .then((comment) => {
-                        newslink.comments.push(comment)
-                        newslink.save()
-                        res.redirect(`/${newslink._id}/comments`)
+                    .then((page) => {
+                        bookId.pages.push(page)
+                        bookId.save()
+                        res.redirect(`/${bookId._id}/pages`)
                     })
             })
     },
     show: (req, res) => {
-        const commentId = req.params.commentId
-        const newsLinkId = req.params.id
-        Pages.findById(commentId).then((comment) => {
-            res.render('comments/show', {
-                comment: comment,
-                newsLinkId: newsLinkId
+        const pageId = req.params.pageId
+        const bookId = req.params.id
+        Pages.findById(pageId).then((page) => {
+            res.render('pages/show', {
+                page: page,
+                bookId: bookId
             })
         }).catch((err) => {
             console.log(err)
@@ -45,11 +46,11 @@ const pagesController = {
     },
 
     delete: (req, res) => {
-        const newslinkId = req.params.id
-        const commentId = req.params.commentId
-        Pages.findByIdAndDelete(commentId)
+        const bookId = req.params.id
+        const pageId = req.params.pageId
+        Pages.findByIdAndDelete(pageId)
             .then(() => {
-                res.redirect(`/${newslinkId}/comments`)
+                res.redirect(`/${bookId}/pages`)
             })
     }
 }

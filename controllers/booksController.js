@@ -2,9 +2,9 @@ Books = require("../models/Books")
 
 const booksController = {
     index: (req, res) => {
-        Books.find({}).then(links => {
+        Books.find({}).then(clickableLink => {
             res.render('app/index', {
-                links
+                clickableLink
             })
         })
     },
@@ -19,43 +19,41 @@ const booksController = {
             content: req.body.content,
             img: req.body.img,
             createdAt: req.body.createdAt
-        }).then(newLink => {
+        }).then(book => {
             res.redirect('/')
         })
     },
     show: (req, res) => {
-        const newslinkId = req.params.id
-        Books.findById(newslinkId).then((newslink) => {
-            console.log(newslink)
+        const booksId = req.params.id
+        Books.findById(booksId).then((book) => {
+            console.log(book)
             res.render('app/show', {
-                newslink
+                book
             })
         })
     },
     edit: (req, res) => {
-        const newslinkId = req.params.id
-        // console.log(newslinkId)
+        const booksId = req.params.id
+        // console.log(booksId)
         res.render('app/edit', {
-            newslinkId
+            booksId
         })
     },
     update: (req, res) => {
-        const newslinkId = req.params.id
+        const booksId = req.params.id
         console.log(req.body)
-        Books.findByIdAndUpdate(newslinkId, req.body, {
+        Books.findByIdAndUpdate(booksId, req.body, {
             new: true
-        }).then((newslink) => {
-            res.redirect(`/${newslinkId}`)
+        }).then((book) => {
+            res.redirect(`/${booksId}`)
         })
     },
     delete: (req, res) => {
-        const newslinkId = req.params.id
-        Books.findByIdAndRemove(newslinkId).then(() => {
+        const booksId = req.params.id
+        Books.findByIdAndRemove(booksId).then(() => {
             res.redirect('/')
         })
     }
 }
-
-
 
 module.exports = booksController
