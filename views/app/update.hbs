@@ -1,4 +1,4 @@
-<h1>This is the edit page</h1>
+<h1>Edit your Book</h1>
 
 {{booksId}}
 <form action="/{{booksId}}?_method=PATCH" method="POST">
@@ -7,7 +7,6 @@
     <input type="text" name="setting" placeholder="Place and Time" value="">
     <input type="text" name="description" placeholder="Description" value="">
     <input type="text" name="genre" placeholder="Genre" value="">
-    <input type="text" name="tags" placeholder="Tags" value="">
     <button class="btn" type="submit">Update</button>
 </form>
 <a href="/{{booksId}}"><button class="btn">Back</button></a>
