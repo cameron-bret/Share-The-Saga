@@ -7,7 +7,6 @@ const Pages = new Schema({
     date: Date,
     description: String,
     genre: String,
-    tags: String
 });
 
 module.exports = mongoose.model("Pages", Pages)

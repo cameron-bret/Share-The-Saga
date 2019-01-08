@@ -4,35 +4,36 @@ const Pages = require('../models/Pages')
 Books.deleteMany({})
     .then(() => {
         return Books.create({
-            name: "The Verge",
-            link: "https://www.theverge.com/",
-            content: 'Technology News website',
-            img: 'https://cdn3.vox-cdn.com/thumbor/p-V8i5J-NMPyPJSOkPhWCRbPLN8=/0x1080/volume-assets.voxmedia.com/production/13eb44738a1d6054f264d6288cfc47d7/pixelbook.jpg',
-            createdAt: "1/3/2019",
-            comments: []
-        }).then((newsLink) => {
-            const niceComment = Pages.create({
-                title: "Good news source!",
-                author: "Cameron",
-                createdAt: "Just now",
-                content: "I friggin love this news source."
-            }).then((comment) => {
-                newsLink.comments.push(comment)
+            title: "Family Stories",
+            date: "01/08/19",
+            setting: '1950-1970 California',
+            description: 'a book for all things family',
+            genre: "scrapbook",
+        }).then((book) => {
+            const page1 = Pages.create({
+                name: "funnyEmail_jim_dad",
+                source: ".pdf",
+                date: "01/07/19",
+                description: "Funny email from Uncle Jim to Dad"
+                genre: "scrapbook"
+            }).then((page) => {
+                book.Pages.push(page)
             })
 
-            const niceComment2 = Pages.create({
-                title: "Good news source! 2",
-                author: "Cameron 2 ",
-                createdAt: "Just now 2",
-                content: "I friggin love this news source. 2"
-            }).then((comment) => {
-                newsLink.comments.push(comment)
+            const page2 = Pages.create({
+                name: "Wasted Wine",
+                source: ".doc",
+                date: "01/08/19",
+                description: "a poem written about spilt wine"
+                genre: "musings"
+            }).then((page) => {
+                book.Pages.push(page)
             })
 
 
-            Promise.all([niceComment, niceComment2])
+            Promise.all([page1, page2])
                 .then(() => {
-                    newsLink.save()
+                    book.save()
                 })
         })
     })

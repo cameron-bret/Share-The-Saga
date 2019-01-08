@@ -7,7 +7,6 @@ const Books = new Schema({
     setting: String,
     description: String,
     genre: String,
-    tags: String
 })
 
 module.exports = mongoose.model("Books", Books)

@@ -43,25 +43,7 @@ const pagesController = {
             console.log(err)
         })
     },
-    edit: (req, res) => {
-        const newslinkId = req.params.id
-        const commentId = req.params.commentId
-        res.render('comments/edit', {
-            newslinkId,
-            commentId
-        })
-    },
-    update: (req, res) => {
-        const newslinkId = req.params.id
-        const commentId = req.params.commentId
-        console.log(commentId)
-        Pages.findByIdAndUpdate(commentId, req.body, {
-                new: true
-            })
-            .then((comment) => {
-                res.redirect(`/${newslinkId}/comments/${commentId}`)
-            })
-    },
+
     delete: (req, res) => {
         const newslinkId = req.params.id
         const commentId = req.params.commentId
