@@ -5,8 +5,8 @@ const methodOverride = require('method-override')
 
 app.use(express.urlencoded({
     extended: true
-}));
-app.use(express.json());
+}))
+app.use(express.json())
 app.use(methodOverride('_method'))
 app.use('/', router)
 
