@@ -28,6 +28,11 @@ Author.deleteMany()
             location: "baltimore"
         })
     })
+
+Books.deleteMany()
+    .then(() => {
+        return Books.deleteMany()
+    })
     .then(() => {
         return Books.create({
             title: "The Hero Gotham Needs Me To Be",
@@ -45,6 +50,11 @@ Author.deleteMany()
             description: "A short story of revenge, a glass best served cold.",
             genre: "horror"
         })
+    })
+
+Pages.deleteMany()
+    .then(() => {
+        return Pages.deleteMany()
     })
     .then(() => {
         return Pages.create({
