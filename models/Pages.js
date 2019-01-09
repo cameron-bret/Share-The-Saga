@@ -6,7 +6,7 @@ const Pages = new Schema({
     source: String,
     date: Date,
     description: String,
-    genre: String,
+    subGenre: String,
 });
 
 module.exports = mongoose.model("Pages", Pages)
