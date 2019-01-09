@@ -9,11 +9,11 @@ const pagesController = {
         new: (req, res) => {
                 res.send('this is where our new page form will render')
         },
-        create: (req, res) => {
-                res.send('you have made a new page')
-        },
         show: (req, res) => {
                 res.send('this is a page')
+        },
+        create: (req, res) => {
+                res.send('you have made a new page')
         },
         delete: (req, res) => {
                 res.send('page deleted')

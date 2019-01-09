@@ -9,9 +9,6 @@ const booksController = {
         new: (req, res) => {
                 res.send('this is where our new book form will render')
         },
-        create: (req, res) => {
-                res.send('you have made a new book')
-        },
         show: (req, res) => {
                 res.send('this is a book')
         },
@@ -20,6 +17,9 @@ const booksController = {
         },
         update: (req, res) => {
                 res.send('this is where the edited book will render')
+        },
+        create: (req, res) => {
+                res.send('you have made a new book')
         },
         delete: (req, res) => {
                 res.send('book deleted')

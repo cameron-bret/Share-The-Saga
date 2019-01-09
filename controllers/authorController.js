@@ -9,11 +9,11 @@ const authorController = {
         new: (req, res) => {
                 res.send('this is where our new author form will render')
         },
-        create: (req, res) => {
-                res.send('you have made a new author')
-        },
         show: (req, res) => {
                 res.send('this is a author')
+        },
+        create: (req, res) => {
+                res.send('you have made a new author')
         },
         delete: (req, res) => {
                 res.send('author deleted')
