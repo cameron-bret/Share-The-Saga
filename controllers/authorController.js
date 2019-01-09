@@ -4,7 +4,7 @@ const Pages = require('../models/Pages')
 
 const authorController = {
         index: (req, res) => {
-                Author.find({}).then(appointment => {
+                Author.find({}).then(authorAccount => {
                         res.render('author/index', {
                                 authorAccount
                         })
