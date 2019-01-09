@@ -5,9 +5,9 @@ const booksController = require('../controllers/booksController')
 const pagesController = require('../controllers/pagesController')
 
 router.get('/', authorController.index)
-// router.post('/', authorController.create)
-// router.get('/new', authorController.new)
-// router.get('/:id', authorController.show)
-// router.delete('/:id', authorController.delete)
+router.get('/new', authorController.new)
+router.get('/:id', authorController.show)
+router.post('/', authorController.create)
+router.delete('/:id', authorController.delete)
 
 module.exports = router
