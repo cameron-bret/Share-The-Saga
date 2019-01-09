@@ -4,7 +4,11 @@ const Pages = require('../models/Pages')
 
 const authorController = {
         index: (req, res) => {
-                res.send('this is all authors')
+                Author.find({}).then(appointment => {
+                        res.render('author/index', {
+                                authorAccount
+                        })
+                })
         },
         new: (req, res) => {
                 res.send('this is where our new author form will render')
