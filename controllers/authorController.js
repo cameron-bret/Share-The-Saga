@@ -5,9 +5,9 @@ const Pages = require('../models/Pages')
 const authorController = {
         index: (req, res) => {
                 // console.log('this is all books')
-                Author.find({}).then(authorAccount => {
+                Author.find({}).then(authorIndex => {
                         res.render('author/index', {
-                                authorAccount
+                                authorIndex
                         })
                 })
         },
@@ -22,16 +22,26 @@ const authorController = {
         show: (req, res) => {
                 // console.log('this is an author')
                 Author.find({}).then(authorShow => {
-                        res.render('author/Show', {
+                        res.render('author/show', {
                                 authorShow
                         })
                 })
         },
         create: (req, res) => {
-                res.send('you have made a new author')
+                // console.log('you have made a new author')
+                Author.find({}).then(authorCreate => {
+                        res.render('author/create', {
+                                authorCreate
+                        })
+                })
         },
         delete: (req, res) => {
-                res.send('author deleted')
+                // console.log('author deleted')
+                Author.find({}).then(authorDelete => {
+                        res.render('author/delete', {
+                                authorDelete
+                        })
+                })
         }
 }
 
