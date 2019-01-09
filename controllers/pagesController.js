@@ -19,5 +19,6 @@ const pagesController = {
         delete: (req, res) => {
 
         }
+}
 
-        module.exports = pagesController
+module.exports = pagesController

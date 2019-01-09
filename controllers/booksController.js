@@ -24,5 +24,6 @@ const booksController = {
         delete: (req, res) => {
 
         }
+}
 
-        module.exports = booksController
+module.exports = booksController

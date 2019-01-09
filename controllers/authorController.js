@@ -19,5 +19,6 @@ const authorController = {
         delete: (req, res) => {
 
         }
+}
 
-        module.exports = authorController
+module.exports = authorController
