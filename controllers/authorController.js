@@ -34,6 +34,16 @@ const authorController = {
                                 authorCreate
                         })
                 })
+                //         const newslinkId = req.params.id
+                // NewsLink.findById(newslinkId)
+                // .then((newslink) => {
+                //     Comment.create(req.body)
+                //     .then((comment) => {
+                //         newslink.comments.push(comment)
+                //         newslink.save()
+                //         res.redirect(`/${newslink._id}/comments`)
+                //     })
+                // })
         },
         delete: (req, res) => {
                 // console.log('author deleted')

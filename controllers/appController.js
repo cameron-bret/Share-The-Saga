@@ -4,19 +4,19 @@ const Pages = require('../models/Pages')
 
 const appController = {
         index: (req, res) => {
-                res.send('home page')
+                res.render('app/index')
         },
         view: (req, res) => {
-                res.send('view decision page')
+                res.render('app/view')
         },
         create: (req, res) => {
-                res.send('create decision page')
+                res.render('app/create')
         },
         update: (req, res) => {
-                res.send('update decision page')
+                res.render('app/update')
         },
         delete: (req, res) => {
-                res.send('delete decision page')
+                res.render('app/delete')
         }
 }
 
