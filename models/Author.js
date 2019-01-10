@@ -9,6 +9,10 @@ const Author = new Schema({
     email: String,
     phoneNumber: String,
     location: String
+    books: [{
+        type: Schema.Types.ObjectId
+        ref: 'Books'
+    }]
 })
 
 module.exports = mongoose.model("Author", Author)

@@ -7,6 +7,10 @@ const Books = new Schema({
     setting: String,
     description: String,
     genre: String,
+    pages: [{
+        type: Schema.Types.ObjectId
+        ref: 'Pages'
+    }]
 })
 
 module.exports = mongoose.model("Books", Books)
