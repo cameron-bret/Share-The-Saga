@@ -22,27 +22,27 @@ jQuery, Materialize, MondoDB, Mongoose, Express.js, Handlebars.js, Node.js, meth
 
 **Below is a list of goals for version 2**
 
-version 2 goal: allow multiple users to collaborate on books together.
-version 2 goal: allow for version control style editing to take place.
-version 2 goal: add full CRUD functionality to all models.
-version 2 goal: allow multiple file types to be uploaded as pages.
-version 2 goal: create social interaction aspect.
+- version 2 goal: allow multiple users to collaborate on books together.
+- version 2 goal: allow for version control style editing to take place.
+- version 2 goal: add full CRUD functionality to all models.
+- version 2 goal: allow multiple file types to be uploaded as pages.
+- version 2 goal: create social interaction aspect.
 
 **Special Thanks**
 
-- -Atarius Armstrong
+- Atarius Armstrong
 - Mark Haley
 - Conrad Casper
 - William Njie
 - JB Watson
 - Daniel Mishael
-Andrew McIntosh
-Destin Floyd
-Joseph Kim
-Shomari Pope
-Stanley Kimani
-Spencer Merryman
-Cameron Gunter
-Noah Harvey
+- Andrew McIntosh
+- Destin Floyd
+- Joseph Kim
+- Shomari Pope
+- Stanley Kimani
+- Spencer Merryman
+- Cameron Gunter
+- Noah Harvey
 
 for inspiration, motivation, and guidance along the way!
