@@ -4,7 +4,7 @@ const Schema = mongoose.Schema
 const Pages = new Schema({
     name: String,
     source: String,
-    date: Date,
+    date: String,
     description: String,
     subGenre: String,
 })
