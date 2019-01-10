@@ -7,8 +7,8 @@ const pagesController = require('../controllers/pagesController')
 
 router.get('/', appController.index)
 router.get('/view', appController.view)
-router.get('/create', appController.create)
-router.post('/update', appController.update)
+router.post('/create', appController.create)
+router.patch('/update', appController.update)
 router.delete('/delete', appController.delete)
 
 router.get('/author', authorController.index)
