@@ -10,7 +10,7 @@ const Author = new Schema({
     phoneNumber: String,
     location: String
     books: [{
-        type: Schema.Types.ObjectId
+        type: Schema.Types.ObjectId,
         ref: 'Books'
     }]
 })

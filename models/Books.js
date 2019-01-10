@@ -8,7 +8,7 @@ const Books = new Schema({
     description: String,
     genre: String,
     pages: [{
-        type: Schema.Types.ObjectId
+        type: Schema.Types.ObjectId,
         ref: 'Pages'
     }]
 })
