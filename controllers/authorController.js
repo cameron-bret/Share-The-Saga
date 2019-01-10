@@ -27,6 +27,14 @@ const authorController = {
                         })
                 })
         },
+        update: (req, res) => {
+                // console.log('this is where the edited book will render')
+                Author.find({}).then(authorUpdate => {
+                        res.render('author/update', {
+                                authorUpdate
+                        })
+                })
+        },
         create: (req, res) => {
                 // console.log('you have made a new author')
                 Author.find({}).then(authorCreate => {

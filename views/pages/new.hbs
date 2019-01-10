@@ -1,3 +1,9 @@
-<h2>Pages New</h2>
-
-{{pagesNew}}
+<h2>New Page</h2>
+<form action="/pages/create" method="POST">
+    <input type="text" name="name" placeholder="Name" value="">
+    <input type="text" name="source" placeholder="Source" value="">
+    <input type="text" name="date" placeholder="Date" value="">
+    <input type="text" name="description" placeholder="Description" value="">
+    <input type="text" name="subGenre" placeholder="Sub Genre" value="">
+    <button class="btn waves-effect waves-light rgba-white-slight" type="submit" name="action">Submit</button>
+</form>

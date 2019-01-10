@@ -29,10 +29,14 @@ const pagesController = {
         },
         create: (req, res) => {
                 // console.log('you have made a new page')
-                Pages.find({}).then(pagesCreate => {
-                        res.render('pages/create', {
-                                pagesCreate
-                        })
+                Pages.create({
+                        name: req.body.name,
+                        source: req.body.source,
+                        date: req.body.date,
+                        description: req.body.description,
+                        subGenre: req.body.subGenre,
+                }).then(backHome => {
+                        res.redirect('/')
                 })
         },
         delete: (req, res) => {

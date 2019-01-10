@@ -14,6 +14,7 @@ router.delete('/delete', appController.delete)
 router.get('/author', authorController.index)
 router.get('/author/new', authorController.new)
 router.get('/author/show', authorController.show)
+router.patch('/author/update', authorController.update)
 router.post('/author/create', authorController.create)
 router.delete('/author/delete', authorController.delete)
 

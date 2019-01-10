@@ -14,7 +14,7 @@ const booksController = {
         new: (req, res) => {
                 // console.log('this is where our new book form will render')
                 Books.find({}).then(booksNew => {
-                        res.render('books/New', {
+                        res.render('books/new', {
                                 booksNew
                         })
                 })
@@ -38,7 +38,7 @@ const booksController = {
         update: (req, res) => {
                 // console.log('this is where the edited book will render')
                 Books.find({}).then(booksUpdate => {
-                        res.render('books/Update', {
+                        res.render('books/update', {
                                 booksUpdate
                         })
                 })
