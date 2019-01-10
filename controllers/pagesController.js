@@ -4,19 +4,44 @@ const Pages = require('../models/Pages')
 
 const pagesController = {
         index: (req, res) => {
-                res.send('this is all pages')
+                // console.log('this is all pages')
+                Pages.find({}).then(pagesIndex => {
+                        res.render('pages/index', {
+                                pagesIndex
+                        })
+                })
         },
         new: (req, res) => {
-                res.send('this is where our new page form will render')
+                // console.log('this is where our new page form will render')
+                Pages.find({}).then(pagesNew => {
+                        res.render('pages/new', {
+                                pagesNew
+                        })
+                })
         },
         show: (req, res) => {
-                res.send('this is a page')
+                // console.log('this is a page')
+                Pages.find({}).then(pagesShow => {
+                        res.render('pages/show', {
+                                pagesShow
+                        })
+                })
         },
         create: (req, res) => {
-                res.send('you have made a new page')
+                // console.log('you have made a new page')
+                Pages.find({}).then(pagesCreate => {
+                        res.render('pages/create', {
+                                pagesCreate
+                        })
+                })
         },
         delete: (req, res) => {
-                res.send('page deleted')
+                // console.log('page deleted')
+                Pages.find({}).then(pagesDelete => {
+                        res.render('pages/delete', {
+                                pagesDelete
+                        })
+                })
         }
 }
 
