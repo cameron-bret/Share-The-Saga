@@ -30,11 +30,11 @@ version 2 goal: create social interaction aspect.
 
 **Special Thanks**
 
--Atarius Armstrong
--Mark Haley
--Conrad Casper
--William Njie
--JB Watson
+*Atarius Armstrong*
+*Mark Haley*
+*Conrad Casper*
+*William Njie
+*JB Watson
 Daniel Mishael
 Andrew McIntosh
 Destin Floyd
