@@ -8,7 +8,7 @@ const Author = new Schema({
     lastName: String,
     email: String,
     phoneNumber: String,
-    location: String
+    location: String,
     books: [{
         type: Schema.Types.ObjectId,
         ref: 'Books'
