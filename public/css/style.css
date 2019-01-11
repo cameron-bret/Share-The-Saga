@@ -33,12 +33,18 @@ h2 {
     justify-content: center;
 }
 
-img {
+/* img {
     display: flex;
     justify-content: center;
 }
 
 .a.nav-link {
+    display: flex;
+    justify-content: center;
+} */
+
+#imageMenuCenter {
+    color: red;
     display: flex;
     justify-content: center;
 }
