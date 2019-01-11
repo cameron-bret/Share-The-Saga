@@ -46,5 +46,6 @@ jQuery, Bootstrap, MondoDB, Mongoose, Express.js, Handlebars.js, Node.js, method
 - Spencer Merryman
 - Cameron Gunter
 - Noah Harvey
+- James Royals
 
 for inspiration, motivation, and guidance along the way!

@@ -28,7 +28,9 @@ router.delete('/books/delete', booksController.delete)
 
 router.get('/pages', pagesController.index)
 router.get('/pages/new', pagesController.new)
-router.get('/pages/show', pagesController.show)
+router.get('/pages/:pagesId', pagesController.show)
+router.get('/edit/:pagesId', pagesController.update)
+router.post('/edit/:pagesId', pagesController.edit)
 router.post('/pages/create', pagesController.create)
 router.delete('/pages/delete', pagesController.delete)
 

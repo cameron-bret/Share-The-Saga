@@ -21,10 +21,33 @@ const pagesController = {
         },
         show: (req, res) => {
                 // console.log('this is a page')
-                Pages.find({}).then(pagesShow => {
+                // Pages.find({}).then(pagesShow => {
+                //         res.render('pages/show', {
+                //                 pagesShow
+                //         })
+                // })
+                const pagesId = req.params.pagesId
+                Pages.findById(pagesId).then((pages) => {
                         res.render('pages/show', {
-                                pagesShow
+                                pages: pages
                         })
+                })
+        },
+        update: (req, res) => {
+                const pagesId = req.params.pagesId
+                res.render('pages/edit', {
+                        pagesId
+                })
+        },
+        edit: (req, res) => {
+                const pagesId = req.params.pagesId
+                const newDescription = req.params.newDescription
+                Pages.findByIdAndUpdate(pagesId, {
+                        description: newDescription
+                }).then(() => {
+
+                        console.log(newDescription)
+                        res.redirect(`/pages/${pagesId}`)
                 })
         },
         create: (req, res) => {
