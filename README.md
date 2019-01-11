@@ -20,14 +20,14 @@ https://trello.com/b/OaBcDOi6/share-the-saga
 
 **Below is a list of technologies/libraries/frameworks/dependencies and resources... think of this section as a citation of sources**
 
-jQuery, Bootstrap, MondoDB, Mongoose, Express.js, Handlebars.js, Node.js, method-override, npm, nodemon, Heroku, Github.
+lucidchart, imgur, Adobe Photoshop, jQuery, Bootstrap, MondoDB, Mongoose, Express.js, Handlebars.js, Node.js, method-override, npm, nodemon, Heroku, Github.
 
 **Below is a list of goals for version 2**
 
 - version 2 goal: allow multiple users to collaborate on books together.
 - version 2 goal: update with more mobile friendly CSS.
 - version 2 goal: allow for version control style editing to take place.
-- version 2 goal: add full Update info functionality to book and author models.
+- version 2 goal: add full Update info to author.
 - version 2 goal: allow multiple file types to be uploaded as pages.
 - version 2 goal: create social interaction aspect.
 
