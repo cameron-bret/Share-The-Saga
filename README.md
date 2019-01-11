@@ -1,6 +1,6 @@
 **PROJECT DESCRIPTION**
 
-Share The Sage is a full stack web application for creating and organizing eBooks.
+Share The Saga is a full stack web application for creating and organizing eBooks.
 
 **Below is a link to the app itself**
 
@@ -25,8 +25,9 @@ jQuery, Bootstrap, MondoDB, Mongoose, Express.js, Handlebars.js, Node.js, method
 **Below is a list of goals for version 2**
 
 - version 2 goal: allow multiple users to collaborate on books together.
+- version 2 goal: update with more mobile friendly CSS.
 - version 2 goal: allow for version control style editing to take place.
-- version 2 goal: add full CRUD functionality to all models.
+- version 2 goal: add full Update info functionality to book and author models.
 - version 2 goal: allow multiple file types to be uploaded as pages.
 - version 2 goal: create social interaction aspect.
 
