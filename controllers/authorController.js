@@ -52,7 +52,7 @@ const authorController = {
                         phone: req.body.phone,
                         location: req.body.location,
                 }).then(backHome => {
-                        res.redirect('/')
+                        res.redirect('/author')
                 })
         },
         delete: (req, res) => {

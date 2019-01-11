@@ -49,7 +49,7 @@ const booksController = {
                         setting: req.body.source,
                         description: req.body.description,
                 }).then(backHome => {
-                        res.redirect('/')
+                        res.redirect('/books')
                 })
         },
         delete: (req, res) => {

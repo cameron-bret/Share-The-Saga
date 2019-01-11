@@ -59,7 +59,7 @@ const pagesController = {
                         description: req.body.description,
                         subGenre: req.body.subGenre,
                 }).then(backHome => {
-                        res.redirect('/')
+                        res.redirect('/pages')
                 })
         },
         delete: (req, res) => {
