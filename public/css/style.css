@@ -41,3 +41,8 @@ h2 {
     display: flex;
     justify-content: center;
 }
+
+#heroImage {
+    display: flex;
+    justify-content: center;
+}
