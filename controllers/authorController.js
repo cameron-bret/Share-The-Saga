@@ -1,6 +1,4 @@
 const Author = require('../models/Author')
-const Books = require('../models/Books')
-const Pages = require('../models/Pages')
 
 const authorController = {
         home: (req, res) => {
