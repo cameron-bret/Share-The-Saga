@@ -4,7 +4,6 @@ const Pages = require('../models/Pages')
 
 const booksController = {
         index: (req, res) => {
-                // console.log('this is all pages')
                 Books.find({}).then(booksIndex => {
                         res.render('books/index', {
                                 booksIndex
@@ -12,7 +11,6 @@ const booksController = {
                 })
         },
         new: (req, res) => {
-                // console.log('this is where our new page form will render')
                 Books.find({}).then(booksNew => {
                         res.render('books/new', {
                                 booksNew
@@ -20,12 +18,6 @@ const booksController = {
                 })
         },
         show: (req, res) => {
-                // console.log('this is a page')
-                // Pages.find({}).then(pagesShow => {
-                //         res.render('pages/show', {
-                //                 pagesShow
-                //         })
-                // })
                 const booksId = req.params.booksId
                 Books.findById(booksId).then((books) => {
                         res.render('books/show', {

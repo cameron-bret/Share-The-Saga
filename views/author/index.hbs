@@ -14,3 +14,8 @@
         <a class="nav-link" href="/author/delete">Delete</a>
     </li>
 </ul>
+{{#each authorIndex}}
+<div>
+    <a href="/author/{{_id}}">{{userName}}</a>
+</div>
+{{/each}}

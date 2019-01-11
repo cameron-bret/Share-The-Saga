@@ -4,7 +4,6 @@ const Pages = require('../models/Pages')
 
 const authorController = {
         index: (req, res) => {
-                // console.log('this is all books')
                 Author.find({}).then(authorIndex => {
                         res.render('author/index', {
                                 authorIndex
@@ -12,7 +11,6 @@ const authorController = {
                 })
         },
         new: (req, res) => {
-                // console.log('this is where our new author form will render')
                 Author.find({}).then(authorNew => {
                         res.render('author/new', {
                                 authorNew
@@ -20,41 +18,44 @@ const authorController = {
                 })
         },
         show: (req, res) => {
-                // console.log('this is an author')
-                Author.find({}).then(authorShow => {
+                const authorId = req.params.authorId
+                Author.findById(authorId).then((author) => {
                         res.render('author/show', {
-                                authorShow
+                                author: author
                         })
                 })
         },
         update: (req, res) => {
-                // console.log('this is where the edited book will render')
-                Author.find({}).then(authorUpdate => {
-                        res.render('author/update', {
-                                authorUpdate
-                        })
+                const authorId = req.params.authorId
+                res.render('author/edit', {
+                        authorId
+                })
+        },
+        edit: (req, res) => {
+                const authorId = req.params.authorId
+                const newDescription = req.params.newDescription
+                Author.findByIdAndUpdate(authorId, {
+                        description: newDescription
+                }).then(() => {
+
+                        console.log(newDescription)
+                        res.redirect(`/author/${authorId}`)
                 })
         },
         create: (req, res) => {
-                // console.log('you have made a new author')
-                Author.find({}).then(authorCreate => {
-                        res.render('author/create', {
-                                authorCreate
-                        })
+                Author.create({
+                        userName: req.body.userName,
+                        password: req.body.password,
+                        firstName: req.body.firstName,
+                        lastName: req.body.lastName,
+                        email: req.body.email,
+                        phone: req.body.phone,
+                        location: req.body.location,
+                }).then(backHome => {
+                        res.redirect('/')
                 })
-                //         const newslinkId = req.params.id
-                // NewsLink.findById(newslinkId)
-                // .then((newslink) => {
-                //     Comment.create(req.body)
-                //     .then((comment) => {
-                //         newslink.comments.push(comment)
-                //         newslink.save()
-                //         res.redirect(`/${newslink._id}/comments`)
-                //     })
-                // })
         },
         delete: (req, res) => {
-                // console.log('author deleted')
                 Author.find({}).then(authorDelete => {
                         res.render('author/delete', {
                                 authorDelete
