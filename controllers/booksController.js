@@ -41,9 +41,9 @@ const booksController = {
         },
         edit: (req, res) => {
                 const booksId = req.params.booksId
-                const newDescription = req.params.newDescription
+                const newTitle = req.params.newTitle
                 Books.findByIdAndUpdate(booksId, {
-                        description: newDescription
+                        title: newTitle
                 }).then(() => {
 
                         console.log(newDescription)
@@ -53,11 +53,9 @@ const booksController = {
         create: (req, res) => {
                 // console.log('you have made a new page')
                 Books.create({
-                        name: req.body.name,
-                        source: req.body.source,
-                        date: req.body.date,
+                        title: req.body.name,
+                        setting: req.body.source,
                         description: req.body.description,
-                        subGenre: req.body.subGenre,
                 }).then(backHome => {
                         res.redirect('/')
                 })
