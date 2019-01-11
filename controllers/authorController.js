@@ -56,7 +56,7 @@ const authorController = {
                         firstName: req.body.firstName,
                         lastName: req.body.lastName,
                         email: req.body.email,
-                        phone: req.body.phone,
+                        phoneNumber: req.body.phone,
                         location: req.body.location,
                 }).then(backHome => {
                         res.redirect('/author')

@@ -44,9 +44,10 @@ const booksController = {
         },
         create: (req, res) => {
                 Books.create({
-                        title: req.body.name,
-                        setting: req.body.source,
+                        title: req.body.title,
+                        setting: req.body.setting,
                         description: req.body.description,
+                        genre: req.body.genre,
                 }).then(backHome => {
                         res.redirect('/books')
                 })

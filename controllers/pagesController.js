@@ -33,11 +33,11 @@ const pagesController = {
         },
         edit: (req, res) => {
                 const pagesId = req.params.pagesId
-                const newFristName = req.params.newFristName
+                const newDescription = req.body.newDescription
                 Pages.findByIdAndUpdate(pagesId, {
-                        firstName: newFristName
+                        description: newDescription
                 }).then(() => {
-                        console.log(newFristName)
+                        console.log(newDescription)
                         res.redirect(`/pages/${pagesId}`)
                 })
         },
@@ -53,10 +53,9 @@ const pagesController = {
                 })
         },
         delete: (req, res) => {
-                Pages.find({}).then(pagesDelete => {
-                        res.render('pages/delete', {
-                                pagesDelete
-                        })
+                const pagesId = req.params.pagesId
+                Pages.findByIdAndDelete(pagesId).then(() => {
+                        res.redirect(`/pages`)
                 })
         }
 }
