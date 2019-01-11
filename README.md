@@ -4,7 +4,7 @@ Share The Sage is a full stack web application for creating and organizing eBook
 
 **Below is a link to the app itself**
 
-
+https://sleepy-springs-79124.herokuapp.com/
 
 **Below is a link to the Trello Board**
 
@@ -20,7 +20,7 @@ https://trello.com/b/OaBcDOi6/share-the-saga
 
 **Below is a list of technologies/libraries/frameworks/dependencies and resources... think of this section as a citation of sources**
 
-jQuery, Bootstrap, MondoDB, Mongoose, Express.js, Handlebars.js, Node.js, method-override, npm, nodemon, Heroku. The following projects were used for reference: chirp-app and mehn-lab.
+jQuery, Bootstrap, MondoDB, Mongoose, Express.js, Handlebars.js, Node.js, method-override, npm, nodemon, Heroku, Github. The following projects were used as reference points for skeleton: chirp-app and mehn-lab.
 
 **Below is a list of goals for version 2**
 

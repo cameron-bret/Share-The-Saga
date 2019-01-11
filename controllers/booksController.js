@@ -38,12 +38,11 @@ const booksController = {
                         title: newTitle
                 }).then(() => {
 
-                        console.log(newDescription)
+                        console.log(newTitle)
                         res.redirect(`/books/${booksId}`)
                 })
         },
         create: (req, res) => {
-                // console.log('you have made a new page')
                 Books.create({
                         title: req.body.name,
                         setting: req.body.source,
@@ -53,7 +52,6 @@ const booksController = {
                 })
         },
         delete: (req, res) => {
-                // console.log('page deleted')
                 Books.find({}).then(booksDelete => {
                         res.render('books/delete', {
                                 booksDelete
