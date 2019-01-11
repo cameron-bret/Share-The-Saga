@@ -4,7 +4,7 @@ const Pages = require('../models/Pages')
 
 const booksController = {
         index: (req, res) => {
-                // console.log('this is all books')
+                // console.log('this is all pages')
                 Books.find({}).then(booksIndex => {
                         res.render('books/index', {
                                 booksIndex
@@ -12,7 +12,7 @@ const booksController = {
                 })
         },
         new: (req, res) => {
-                // console.log('this is where our new book form will render')
+                // console.log('this is where our new page form will render')
                 Books.find({}).then(booksNew => {
                         res.render('books/new', {
                                 booksNew
@@ -20,39 +20,50 @@ const booksController = {
                 })
         },
         show: (req, res) => {
-                // console.log('this is a book')
-                Books.find({}).then(booksShow => {
+                // console.log('this is a page')
+                // Pages.find({}).then(pagesShow => {
+                //         res.render('pages/show', {
+                //                 pagesShow
+                //         })
+                // })
+                const booksId = req.params.booksId
+                Books.findById(booksId).then((books) => {
                         res.render('books/show', {
-                                booksShow
-                        })
-                })
-        },
-        edit: (req, res) => {
-                // console.log('this is where you edit a book')
-                Books.find({}).then(booksEdit => {
-                        res.render('books/edit', {
-                                booksEdit
+                                books: books
                         })
                 })
         },
         update: (req, res) => {
-                // console.log('this is where the edited book will render')
-                Books.find({}).then(booksUpdate => {
-                        res.render('books/update', {
-                                booksUpdate
-                        })
+                const booksId = req.params.booksId
+                res.render('books/edit', {
+                        booksId
+                })
+        },
+        edit: (req, res) => {
+                const booksId = req.params.booksId
+                const newDescription = req.params.newDescription
+                Books.findByIdAndUpdate(booksId, {
+                        description: newDescription
+                }).then(() => {
+
+                        console.log(newDescription)
+                        res.redirect(`/books/${booksId}`)
                 })
         },
         create: (req, res) => {
-                // console.log('you have made a new book')
-                Books.find({}).then(booksCreate => {
-                        res.render('books/create', {
-                                booksCreate
-                        })
+                // console.log('you have made a new page')
+                Books.create({
+                        name: req.body.name,
+                        source: req.body.source,
+                        date: req.body.date,
+                        description: req.body.description,
+                        subGenre: req.body.subGenre,
+                }).then(backHome => {
+                        res.redirect('/')
                 })
         },
         delete: (req, res) => {
-                res.send('book deleted')
+                // console.log('page deleted')
                 Books.find({}).then(booksDelete => {
                         res.render('books/delete', {
                                 booksDelete
