@@ -1,12 +1,44 @@
 h1 {
-    color: red;
+    color: #B0CDD9;
+    background-color: #592B02;
     text-decoration: none;
 }
 
 a {
-    text-decoration: none
+    color: #B0CDD9;
+    background-color: #592B02;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+
+nav {
+    color: #B0CDD9;
+    display: flex;
+    align-self: center;
+    align-content: center;
+    justify-content: center;
+    text-decoration: none;
 }
 
 h4 {
-    color: purple
+    color: #B0CDD9;
+    background-color: #592B02;
+    display: flex;
+    justify-content: center;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    display: flex;
+    justify-content: center;
+}
+
+.a.nav-link {
+    display: flex;
+    justify-content: center;
 }
