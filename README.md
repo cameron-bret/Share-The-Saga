@@ -20,7 +20,7 @@ https://trello.com/b/OaBcDOi6/share-the-saga
 
 **Below is a list of technologies/libraries/frameworks/dependencies and resources... think of this section as a citation of sources**
 
-jQuery, Bootstrap, MondoDB, Mongoose, Express.js, Handlebars.js, Node.js, method-override, npm, nodemon, Heroku, Github. The following projects were used as reference points for skeleton: chirp-app and mehn-lab.
+jQuery, Bootstrap, MondoDB, Mongoose, Express.js, Handlebars.js, Node.js, method-override, npm, nodemon, Heroku, Github.
 
 **Below is a list of goals for version 2**
 
