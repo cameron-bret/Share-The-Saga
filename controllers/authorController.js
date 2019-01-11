@@ -63,10 +63,9 @@ const authorController = {
                 })
         },
         delete: (req, res) => {
-                Author.find({}).then(authorDelete => {
-                        res.render('author/delete', {
-                                authorDelete
-                        })
+                const authorId = req.params.authorId
+                Author.findByIdAndDelete(authorId).then(() => {
+                        res.redirect(`/author`)
                 })
         }
 }

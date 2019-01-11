@@ -53,10 +53,9 @@ const booksController = {
                 })
         },
         delete: (req, res) => {
-                Books.find({}).then(booksDelete => {
-                        res.render('books/delete', {
-                                booksDelete
-                        })
+                const booksId = req.params.booksId
+                Books.findByIdAndDelete(booksId).then(() => {
+                        res.redirect(`/books`)
                 })
         }
 }
