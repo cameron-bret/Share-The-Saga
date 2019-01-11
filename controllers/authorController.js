@@ -38,12 +38,12 @@ const authorController = {
         },
         edit: (req, res) => {
                 const authorId = req.params.authorId
-                const newDescription = req.params.newDescription
+                const newFirstName = req.body.newFirstName
                 Author.findByIdAndUpdate(authorId, {
-                        description: newDescription
+                        firstName: newFirstName
                 }).then(() => {
 
-                        console.log(newDescription)
+                        console.log(newFirstName)
                         res.redirect(`/author/${authorId}`)
                 })
         },
@@ -54,7 +54,7 @@ const authorController = {
                         firstName: req.body.firstName,
                         lastName: req.body.lastName,
                         email: req.body.email,
-                        phoneNumber: req.body.phone,
+                        phoneNumber: req.body.phoneNumber,
                         location: req.body.location,
                 }).then(backHome => {
                         res.redirect('/author')

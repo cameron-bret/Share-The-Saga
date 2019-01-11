@@ -31,7 +31,7 @@ const booksController = {
         },
         edit: (req, res) => {
                 const booksId = req.params.booksId
-                const newTitle = req.params.newTitle
+                const newTitle = req.body.newTitle
                 Books.findByIdAndUpdate(booksId, {
                         title: newTitle
                 }).then(() => {
