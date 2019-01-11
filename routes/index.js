@@ -1,16 +1,10 @@
 const express = require('express')
 const router = express.Router()
-const appController = require('../controllers/appController')
 const authorController = require('../controllers/authorController')
 const booksController = require('../controllers/booksController')
 const pagesController = require('../controllers/pagesController')
 
-router.get('/', appController.index)
-router.get('/view', appController.view)
-router.post('/create', appController.create)
-router.patch('/update', appController.update)
-router.delete('/delete', appController.delete)
-
+router.get('/', authorController.home)
 router.get('/author', authorController.index)
 router.get('/author/new', authorController.new)
 router.get('/authors/:authorId', authorController.show)

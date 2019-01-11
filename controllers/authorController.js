@@ -3,6 +3,13 @@ const Books = require('../models/Books')
 const Pages = require('../models/Pages')
 
 const authorController = {
+        home: (req, res) => {
+                Author.find({}).then(authorHome => {
+                        res.render('author/home', {
+                                authorHome
+                        })
+                })
+        },
         index: (req, res) => {
                 Author.find({}).then(authorIndex => {
                         res.render('author/index', {
